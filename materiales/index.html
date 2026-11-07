@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#123b35"><title>Análisis complejo · Material de estudio</title><script>
+// Cada apertura empieza en la portada, sin restaurar el scroll de la sesión anterior.
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (['#study', '#welcome-title'].includes(location.hash)) {
+  history.replaceState(history.state, '', location.pathname + location.search);
+}
+window.addEventListener('pageshow', function () {
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+});
+</script><link rel="stylesheet" href="vendor/katex/katex.min.css"><link rel="stylesheet" href="style.css"><script defer src="vendor/katex/katex.min.js"></script><script defer src="math.js"></script><script defer src="content.js"></script><script defer src="card-diagrams.js"></script><script defer src="residue-model.js"></script><script defer src="app.js"></script></head>
+<body>
+<a class="skip-link" href="#study">Ir a los modos de estudio</a>
+<section class="landing" aria-labelledby="welcome-title">
+<header><a class="brand" href="#welcome-title"><span class="brand-icon">ℂ</span> Análisis complejo</a><a class="source" href="../AnalisisComplejoUM-17deAgosto.pdf" target="_blank" rel="noopener">Abrir apunte ↗</a></header>
+<div class="intro">
+<div class="hero-copy"><p class="eyebrow">ANÁLISIS COMPLEJO · UNIVERSIDAD DE MONTEVIDEO</p>
+<h1 id="welcome-title"><span class="title-line"><span>Entender.</span></span><span class="title-line"><span>Explorar.</span></span><span class="title-line"><em>Practicar.</em></span></h1>
+<p class="lede">Tarjetas, visualizaciones y ejercicios para estudiar el apunte de Diego Jauré.</p>
+</div>
+<aside class="hero-art" aria-hidden="true">
+<svg viewBox="0 0 440 440" fill="none">
+<defs><pattern id="hero-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#174c40" stroke-opacity=".07"/></pattern></defs>
+<circle cx="220" cy="220" r="210" fill="url(#hero-grid)"/>
+<path d="M12 220H428M220 12V428" stroke="#9bb4a3"/>
+<circle class="orbit-dashed" cx="220" cy="220" r="152" stroke="#729679" stroke-dasharray="3 9"/>
+<circle cx="220" cy="220" r="96" stroke="#a7bd92" stroke-opacity=".55"/>
+<g class="orbit-shape"><path d="M220 68L372 220L220 372L68 220Z" fill="#dce9b9" fill-opacity=".38" stroke="#477c6d"/><path d="M220 220L372 220" stroke="#b75732" stroke-width="2"/><circle cx="372" cy="220" r="7" fill="#b75732"/><circle cx="68" cy="220" r="4" fill="#174c40"/></g>
+<g class="orbit-inner"><circle cx="316" cy="220" r="4" fill="#174c40"/><circle cx="124" cy="220" r="4" fill="#174c40"/></g>
+<circle cx="220" cy="220" r="4" fill="#174c40"/>
+<path d="M255 220A35 35 0 0 0 245 195" stroke="#b75732"/>
+<text x="258" y="203" fill="#b75732" font-family="Georgia,serif" font-style="italic" font-size="19">θ</text>
+<text x="404" y="242" fill="#64736b" font-size="12">Re</text><text x="231" y="28" fill="#64736b" font-size="12">Im</text>
+<text x="300" y="58" fill="#174c40" font-family="Georgia,serif" font-style="italic" font-size="22">z = reⁱᶿ</text>
+</svg>
+</aside>
+</div>
+<a class="scroll-cue" href="#study"><span class="scroll-line"></span><span>Ir al material de estudio</span><span class="scroll-arrow">↓</span></a>
+</section>
+<main id="study" class="study" tabindex="-1"><div class="study-inner">
+<nav aria-label="Materiales" id="tabs"><button data-tab="cards" class="active">01 <span>Flashcards</span></button><button data-tab="labs">02 <span>Visualizaciones</span></button><button data-tab="quiz">03 <span>Preguntas</span></button><button data-tab="exercises">04 <span>Ejercicios</span></button></nav>
+<section id="workspace" aria-live="polite"></section>
+</div></main></body></html>
