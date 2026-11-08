@@ -4,6 +4,8 @@ Materiales de estudio basados en **Análisis Complejo**, Diego Jauré, Primavera
 
 ## Abrir los materiales
 
+Para publicarlo en Vercel, seguí [DEPLOYMENT.md](DEPLOYMENT.md). El sitio actual funciona sin backend; el progreso se guarda en el navegador.
+
 Abrí [materiales/index.html](materiales/index.html) en tu navegador. Funciona directamente como archivo local, sin instalación, conexión ni compilación.
 
 Para servirlo por HTTP y conservar una dirección estable para el progreso, ejecutá desde la raíz del repo:

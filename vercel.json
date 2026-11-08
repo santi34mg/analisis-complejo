@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "node scripts/build.cjs",
+  "outputDirectory": "public",
+  "redirects": [
+    { "source": "/", "destination": "/materiales/", "permanent": false }
+  ]
+}
