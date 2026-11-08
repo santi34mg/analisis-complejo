@@ -24,6 +24,7 @@ function renderCards(message=''){
  <div class="flash-face flash-back panel" aria-hidden="${!revealed}"><span class="eyebrow">RESPUESTA · CAPÍTULO ${c.ch}</span><h3>${mathHTML(c.title)}</h3><div class="answer">${mathHTML(c.answer)}</div><div class="example">${mathHTML(c.example)}</div>${cardDiagramMarkup(c)}<span class="flip-hint">Clic para volver a la pregunta ↻</span></div>
  </div></div></div>
  <div class="flash-meta">${ref(c.section)}<p id="card-help" class="sub">También podés usar Enter para girar y las flechas ← / → para clasificar.</p></div>`:`<div class="empty panel">No quedan tarjetas pendientes en este capítulo. Podés volver a verlas todas.</div>`}
+ ${c?`<div class="actions card-actions" aria-label="Clasificar tarjeta"><button class="btn secondary" id="card-review">← Revisar</button><button class="btn secondary" id="card-flip">${revealed?'Ver pregunta':'Ver respuesta'}</button><button class="btn" id="card-learned">Aprendida →</button></div>`:''}
  <p class="card-status sub" role="status">${escapeHTML(message)}</p>`;
  $('#pending').onclick=()=>{onlyPending=!onlyPending;ci=0;revealed=false;renderCards();};
  if(!c)return;
@@ -37,6 +38,7 @@ function renderCards(message=''){
   board.setAttribute('aria-label',(revealed?c.answer+' '+c.example+' '+(cardDiagrams[c.id]?.caption||''):c.title)+'. Enter o espacio: dar vuelta. Flecha izquierda: revisar. Flecha derecha: aprendida.');
   $('.flash-front').setAttribute('aria-hidden',String(revealed));
   $('.flash-back').setAttribute('aria-hidden',String(!revealed));
+  $('#card-flip').textContent=revealed?'Ver pregunta':'Ver respuesta';
  };
  const resetDrag=()=>{
   start=null;dx=0;dy=0;
@@ -62,6 +64,9 @@ function renderCards(message=''){
   };
   window.setTimeout(next,180);
  };
+ $('#card-review').onclick=()=>classify(false);
+ $('#card-flip').onclick=flip;
+ $('#card-learned').onclick=()=>classify(true);
  board.onclick=()=>{if(suppressClick){suppressClick=false;return;}flip();};
  board.onkeydown=e=>{
   if(e.key==='Enter'||e.key===' '){e.preventDefault();flip();}
