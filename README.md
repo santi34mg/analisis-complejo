@@ -16,12 +16,14 @@ Luego entrá a **http://localhost:8000/materiales/**. Usá siempre el mismo nave
 
 ## Qué incluye
 
-- **34 flashcards** de definiciones, hipótesis y teoremas, con ejemplos y filtro de pendientes. Incluyen **28 diagramas explicativos** en el dorso, con etiquetas y una descripción breve. Clic para girar; arrastrar a la derecha para marcar como aprendida o a la izquierda para revisar después. Al presionar aparecen los indicadores. También se pueden usar Enter/espacio y las flechas del teclado.
+- **205 flashcards** de definiciones, hipótesis y teoremas, con ejemplos y filtro de pendientes. Cubren las 18 secciones de los cuatro capítulos e incluyen preguntas de hipótesis, ejemplos, contraejemplos y cálculos breves. Incluyen **28 diagramas explicativos** en el dorso, con etiquetas y una descripción breve. Clic para girar; arrastrar a la derecha para marcar como aprendida o a la izquierda para revisar después. Al presionar aparecen los indicadores. También se pueden usar Enter/espacio y las flechas del teclado.
 - **31 preguntas**: 14 verdaderos/falsos, 4 de opción múltiple teórica y 13 de cálculo. Corrección inmediata, explicación y rondas aleatorias.
 - **20 ejercicios** con dificultad, pistas, soluciones, notas personales y seguimiento. El botón de impresión produce una lista sin soluciones.
 - **6 laboratorios interactivos**: residuos e índice (8 funciones para comparar, centro complejo ajustable arrastrando el círculo o usando los controles, radio, orientación, vueltas y tabla de residuos e índices); fórmula integral de Cauchy; conformidad local de z²; convergencia de zⁿ; Rouché; propiedad de la media y módulo máximo.
 
 Los materiales siguen los cuatro capítulos del apunte. Cada actividad enlaza su sección y página física del PDF (distinta de la numeración impresa). Las actividades son material original de práctica: no transcriben una guía de ejercicios del autor. Se usan enunciados matemáticos con sus hipótesis explícitas; no se reproducen posibles erratas del apunte. Los apéndices aparecen sin desarrollo en el PDF y no se incluyen como unidades de estudio.
+
+El detalle de cobertura está en [materiales/cobertura-flashcards.md](materiales/cobertura-flashcards.md).
 
 ## Recorrido sugerido
 
